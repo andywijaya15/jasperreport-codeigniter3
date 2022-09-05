@@ -33,11 +33,9 @@ class Model_JasperReport extends CI_Controller
         if (!is_readable($filepath)) {
             throw new Exception("File $filepath is not readable");
         }
-        // $outputnameinbrowser = $options['namafile'] . '.pdf';
         http_response_code(200);
         header('Content-Length: ' . filesize($filepath));
         header("Content-Type: application/pdf");
-        // header('Content-Disposition: attachment; filename="' . $outputnameinbrowser . '"');
         header('Content-Disposition: inline');
         readfile($filepath);
 
