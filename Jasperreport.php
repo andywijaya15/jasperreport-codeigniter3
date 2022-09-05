@@ -13,8 +13,8 @@ class Model_JasperReport extends CI_Controller
 
     public function pdfJasperHelloWorld()
     {
-        $input = 'report/examples/hello_world.jasper';
-        $output =  'report/examples';
+        $input = 'hello_world.jasper'; // input path
+        $output =  'examples'; // output path
         $options = [
             'format' => ['pdf']
         ];
